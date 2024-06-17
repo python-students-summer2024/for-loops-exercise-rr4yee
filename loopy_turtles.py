@@ -123,7 +123,7 @@ def draw_star(
             t.right(angle)
         t.forward(length)
         if initial_rotation_direction == "left":
-            t.right(18)
+            t.right(angle - 72)
         elif initial_rotation_direction == "right":
-            t.left(48)
+            t.left(angle - 72)
     t.end_fill()

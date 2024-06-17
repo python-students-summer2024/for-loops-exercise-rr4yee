@@ -35,6 +35,7 @@ def guess_number(low, high, num_attempts):
             print("Sorry, that's not a valid number.")
         if guess == number:
             print(f"Congratulations! You guessed it! It was {number}.")
+            return True
         print("Incorrect.")
     print(f"Sorry you have used up all {num_attempts} attempts. The number was {number}.")
     return False
