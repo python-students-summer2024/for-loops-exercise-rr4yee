@@ -122,9 +122,8 @@ def draw_star(
         elif initial_rotation_direction == "right":
             t.right(angle)
         t.forward(length)
-        print_turtle_position(t)
         if initial_rotation_direction == "left":
-            t.right(144)
+            t.right(18)
         elif initial_rotation_direction == "right":
-            t.left(144)
+            t.left(48)
     t.end_fill()

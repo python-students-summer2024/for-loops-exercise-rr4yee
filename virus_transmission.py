@@ -18,7 +18,7 @@ def calculate_infections(starting_number_infections, reproduction_rate, num_days
     :returns: The new number of infected individuals after the given number of days, rounded to the nearest integer.
     """
     infections = starting_number_infections
-    for days in range(1, num_days +1):
+    for days in range(num_days):
         new = infections * reproduction_rate
         infections += new
     return round(infections)

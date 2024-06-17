@@ -25,6 +25,7 @@ def guess_number(low, high, num_attempts):
     :returns: True if the user answers any attempt correctly, False otherwise.
     """
     number = random.randint(low, high)
+
     print(f"Guess a number between {low} and {high}. You have {num_attempts} attempts.")
     for attempt in range(1, num_attempts + 1):
         guess = input(f"Attempts {attempt}: Please enter your guess: ")
