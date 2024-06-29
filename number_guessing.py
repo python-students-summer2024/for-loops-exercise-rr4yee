@@ -24,18 +24,18 @@ def guess_number(low, high, num_attempts):
     :param num_attempts: The number of attempts the user is given to guess the correct number.
     :returns: True if the user answers any attempt correctly, False otherwise.
     """
-    number = random.randint(low, high)
-
+    num = random.randint(low, high)
     print(f"Guess a number between {low} and {high}. You have {num_attempts} attempts.")
-    for attempt in range(1, num_attempts + 1):
-        guess = input(f"Attempts {attempt}: Please enter your guess: ")
-        try:
+    for num_attempts in range(1, num_attempts +1):
+        guess = input(f"Attemps: {num_attempts}. Please enter your guess: ")
+        if guess.isnumeric():
             guess = int(guess)
-        except: 
-            print("Sorry, that's not a valid number.")
-        if guess == number:
-            print(f"Congratulations! You guessed it! It was {number}.")
+        else:
+            print("Sorry, that is incorrect. Please enter a valid number.")
+        if guess == num:
+            print(f"Congratulations! You guessed the correct number! It was {num}.")
             return True
-        print("Incorrect.")
-    print(f"Sorry you have used up all {num_attempts} attempts. The number was {number}.")
+        else:
+            print("Incorrect.")
+    print(f"Sorry, you have used up all {num_attempts} attempts. The number was {num}.")
     return False
